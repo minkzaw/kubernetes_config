@@ -19,7 +19,7 @@ spec:
       containers:
         - name: pvc-monitoring-container
           image: busybox
-          command: ["/bin/sh", "-c", "mkdir -p /mnt/data && chmod 777 /mnt/data && while true; do echo 'Hello from pvc-monitoring' > /mnt/data/hello.txt; sleep 10; done"]
+          command: ["/bin/sh", "-c", "mkdir -p /mnt/data && chmod 777 /mnt/data && while true; do echo 'Hello from pvc-monitoring' >> /mnt/data/hello.txt; sleep 10; done"]
           volumeMounts:
             - name: data-volume
               mountPath: /mnt/data
