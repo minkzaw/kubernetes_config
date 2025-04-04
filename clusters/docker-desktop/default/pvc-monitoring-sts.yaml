@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: pvc-monitoring
+  namespace: default
+spec:
+  serviceName: "pvc-monitoring-service"
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pvc-monitoring
+  template:
+    metadata:
+      labels:
+        app: pvc-monitoring
+    spec:
+      securityContext:
+        fsGroup: 1000  # Ensures volume is writable by non-root users
+      containers:
+        - name: pvc-monitoring-container
+          image: busybox
+          command: ["/bin/sh", "-c", "mkdir -p /mnt/data && chmod 777 /mnt/data && while true; do echo 'Hello from pvc-monitoring' > /mnt/data/hello.txt; sleep 10; done"]
+          volumeMounts:
+            - name: data-volume
+              mountPath: /mnt/data
+  volumeClaimTemplates:
+    - metadata:
+        name: data-volume
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 1Gi
