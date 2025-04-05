@@ -10,8 +10,8 @@ spec:
       chart: prometheus-community/prometheus
       version: "27.8.0"
       sourceRef:
-        kind: GitRepository
-        name: flux-system  # Your Git repository name
+        kind: HelmRepository
+        name: prometheus-community  # Your Git repository name
         namespace: flux-system
   interval: 5m  # The interval for Flux to check for updates
   install:
