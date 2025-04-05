@@ -15,4 +15,4 @@ spec:
   install:
     remediation:
       retries: 3
-  createNamespace: true
+    createNamespace: true
