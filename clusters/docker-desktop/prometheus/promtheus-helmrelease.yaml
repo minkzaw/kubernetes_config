@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: prometheus-community  # Your Git repository name
-        namespace: flux-system
+        namespace: prometheus
   interval: 5m  # The interval for Flux to check for updates
   install:
     remediation:
