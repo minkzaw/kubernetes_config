@@ -11,7 +11,7 @@ spec:
       version: "27.8.0"
       sourceRef:
         kind: GitRepository
-        name: kubernetes_config  # Your Git repository name
+        name: flux-system  # Your Git repository name
         namespace: flux-system
   interval: 5m  # The interval for Flux to check for updates
   install:
