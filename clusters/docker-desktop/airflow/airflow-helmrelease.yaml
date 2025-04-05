@@ -3,6 +3,7 @@ kind: HelmRelease
 metadata:
   name: airflow
 spec:
+  timeout: 15m
   releaseName: airflow
   chart:
     spec:
@@ -11,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: apache-airflow 
-  interval: 15m 
+  interval: 5m 
   install:
     remediation:
       retries: 3
