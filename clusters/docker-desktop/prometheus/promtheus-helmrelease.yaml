@@ -1,4 +1,4 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: prometheus
@@ -13,7 +13,7 @@ spec:
         kind: GitRepository
         name: kubernetes_config  # Your Git repository name
         namespace: flux-system
-      interval: 5m
+      interval: 5m  # The interval for Flux to check for updates
   install:
     remediation:
       retries: 3
