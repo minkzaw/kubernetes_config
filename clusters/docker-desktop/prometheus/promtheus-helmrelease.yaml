@@ -13,7 +13,7 @@ spec:
         kind: GitRepository
         name: kubernetes_config  # Your Git repository name
         namespace: flux-system
-      interval: 5m  # The interval for Flux to check for updates
+  interval: 5m  # The interval for Flux to check for updates
   install:
     remediation:
       retries: 3
