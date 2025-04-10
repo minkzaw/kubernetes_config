@@ -22,9 +22,10 @@ spec:
       reconcileIPtablesOnStartup: true
       dnsCapture: true
       ipv6: true
-      
     pilot:
       enabled: true
+      env:
+        PILOT_ENABLE_AMBIENT: "true"
     global:
       proxy:
         enabled: true
