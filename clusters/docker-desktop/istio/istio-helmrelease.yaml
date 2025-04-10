@@ -15,5 +15,3 @@ spec:
   install:
     remediation:
       retries: 3
-    createNamespace: true
-    wait: true
