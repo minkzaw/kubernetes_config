@@ -11,4 +11,4 @@ spec:
         kind: HelmRepository
         name: istio
   values:
-    profile: ambient
+    ambient: true
