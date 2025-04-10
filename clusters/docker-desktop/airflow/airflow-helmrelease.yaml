@@ -12,7 +12,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: apache-airflow 
-      wait: true
   interval: 5m 
   install:
     remediation:
