@@ -10,95 +10,95 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: istio
-    values:
-      _internal_defaults_do_not_set:
-        hub: ""
-        tag: ""
-        variant: ""
-        image: install-cni
-        pullPolicy: ""
+    # values:
+    #   _internal_defaults_do_not_set:
+    #     hub: ""
+    #     tag: ""
+    #     variant: ""
+    #     image: install-cni
+    #     pullPolicy: ""
 
-        logging:
-          level: ""
-
-
-        cniBinDir: /opt/cni/bin
-        cniConfDir: /etc/cni/net.d
-        cniConfFileName: ""
-        cniNetnsDir: "/var/run/netns"
-
-        excludeNamespaces:
-          - kube-system
-
-        affinity: {}
-
-        podAnnotations: {}
-
-        chained: true
-
-        provider: "default"
-
-        ambient:
-          enabled: true
-          configDir: ""
-          dnsCapture: true
-          ipv6: true
-          reconcileIptablesOnStartup: true
+    #     logging:
+    #       level: ""
 
 
-        repair:
-          enabled: true
-          hub: ""
-          tag: ""
+    #     cniBinDir: /opt/cni/bin
+    #     cniConfDir: /etc/cni/net.d
+    #     cniConfFileName: ""
+    #     cniNetnsDir: "/var/run/netns"
+
+    #     excludeNamespaces:
+    #       - kube-system
+
+    #     affinity: {}
+
+    #     podAnnotations: {}
+
+    #     chained: true
+
+    #     provider: "default"
+
+    #     ambient:
+    #       enabled: true
+    #       configDir: ""
+    #       dnsCapture: true
+    #       ipv6: true
+    #       reconcileIptablesOnStartup: true
 
 
-          labelPods: false
-          deletePods: false
-          repairPods: true
+    #     repair:
+    #       enabled: true
+    #       hub: ""
+    #       tag: ""
 
-          initContainerName: "istio-validation"
 
-          brokenPodLabelKey: "cni.istio.io/uninitialized"
-          brokenPodLabelValue: "true"
+    #       labelPods: false
+    #       deletePods: false
+    #       repairPods: true
 
-        seccompProfile: {}
+    #       initContainerName: "istio-validation"
 
-        seLinuxOptions: {}
+    #       brokenPodLabelKey: "cni.istio.io/uninitialized"
+    #       brokenPodLabelValue: "true"
 
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
+    #     seccompProfile: {}
 
-        resourceQuotas:
-          enabled: false
-          pods: 5000
+    #     seLinuxOptions: {}
 
-        rollingMaxUnavailable: 1
+    #     resources:
+    #       requests:
+    #         cpu: 100m
+    #         memory: 100Mi
 
-        revision: ""
+    #     resourceQuotas:
+    #       enabled: false
+    #       pods: 5000
 
-        ownerName: ""
+    #     rollingMaxUnavailable: 1
 
-        global:
-          hub: docker.io/istio
+    #     revision: ""
 
-          tag: 1.25.1
+    #     ownerName: ""
 
-          variant: ""
+    #     global:
+    #       hub: docker.io/istio
 
-          imagePullPolicy: ""
+    #       tag: 1.25.1
 
-          logging:
-            level: info
+    #       variant: ""
 
-          logAsJson: false
+    #       imagePullPolicy: ""
 
-          imagePullSecrets: []
+    #       logging:
+    #         level: info
 
-          defaultResources:
-            requests:
-              cpu: 100m
-              memory: 100Mi
+    #       logAsJson: false
 
-        env: {}
+    #       imagePullSecrets: []
+
+    #       defaultResources:
+    #         requests:
+    #           cpu: 100m
+    #           memory: 100Mi
+
+    #     env: {}
