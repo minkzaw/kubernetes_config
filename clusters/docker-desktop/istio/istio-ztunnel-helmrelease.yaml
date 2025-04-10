@@ -1,20 +1,16 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: istio-cni
+  name: ztunnel
 spec:
-  releaseName: istio-cni
+  releaseName: ztunnel
   interval: 5m
   chart:
     spec:
-      chart: cni
+      chart: ztunnel
       sourceRef:
         kind: HelmRepository
         name: istio
   install:
     remediation:
       retries: 3
-  values:
-    _internal_defaults_do_not_set:
-      ambient:
-        enabled: true
