@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: istio
-      values:
-          ambient:
-            enabled: true
+  values:
+    ambient:
+      enabled: true
 
