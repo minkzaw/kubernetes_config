@@ -3,4 +3,6 @@ kind: Kustomization
 resources:
   - istio-namespace.yaml
   - istio-repo.yaml
+  - istio-base-helmrelease.yaml
+  - istiod-helmrelease.yaml
 namespace: istio-system
