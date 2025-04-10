@@ -6,4 +6,5 @@ resources:
   - istio-base-helmrelease.yaml
   - istiod-helmrelease.yaml
   - istio-cni-helmrelease.yaml
+  - istio-ztunnel-helmrelease.yaml
 namespace: istio-system
