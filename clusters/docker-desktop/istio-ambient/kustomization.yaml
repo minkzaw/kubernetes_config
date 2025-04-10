@@ -4,4 +4,4 @@ resources:
   - istio-namespace.yaml
   - istio-repo.yaml
   - istio-helmrelease.yaml
-namespace: istio-ambient
+namespace: istio-system
