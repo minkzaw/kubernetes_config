@@ -18,14 +18,14 @@ spec:
   values:
     ambient:
       enabled: true
-    ambientConfig:
-      reconcileIPtablesOnStartup: true
-      dnsCapture: true
-      ipv6: true
+    # ambientConfig:
+    #   reconcileIPtablesOnStartup: true
+    #   dnsCapture: true
+    #   ipv6: true
     pilot:
       enabled: true
       env:
         PILOT_ENABLE_AMBIENT: "true"
-    global:
-      proxy:
-        enabled: true
+    # global:
+    #   proxy:
+    #     enabled: true
