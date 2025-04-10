@@ -13,4 +13,3 @@ spec:
   values:
     ambient:
       enabled: true
-
