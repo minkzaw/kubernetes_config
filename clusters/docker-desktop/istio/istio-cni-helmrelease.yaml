@@ -10,5 +10,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: istio
-    values:
-      profile: ambient
+    valuesFiles:
+      - istio-cni-values.yaml
