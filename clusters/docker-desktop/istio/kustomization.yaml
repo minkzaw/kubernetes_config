@@ -5,4 +5,5 @@ resources:
   - istio-repo.yaml
   - istio-base-helmrelease.yaml
   - istiod-helmrelease.yaml
+  - istio-cni-helmrelease.yaml
 namespace: istio-system
